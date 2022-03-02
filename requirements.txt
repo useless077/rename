@@ -2,7 +2,6 @@ https://github.com/Mahesh0253/pyrogram/archive/inline.zip
 Pillow
 humanize
 hachoir
-pyrogram==1.2.9
 TgCrypto
 pymongo
 dnspython
