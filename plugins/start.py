@@ -12,8 +12,8 @@ async def start(client,message):
 	**Document Or Video** and enter new filenameto rename it__
 	""",reply_to_message_id = message.message_id ,  
 	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/lntechnical") ], 
-	[InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/LNtechnical") ]  ]))
+	 [[ InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/TamilSupport") ], 
+	[InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/TamilBots") ]  ]))
 
 
 
@@ -25,7 +25,7 @@ async def send_doc(client,message):
        filesize = humanize.naturalsize(file.file_size)
        fileid = file.file_id
        await message.reply_text(
-       f"""__What do you want me to do with this file?__\n**File Name** :- {filename}\n**File Size** :- {filesize}"""
+       f"""__What do you want me to do with this file?__\n**File Name** :- '{filename}'\n**File Size** :- {filesize}"""
        ,reply_to_message_id = message.message_id,
        reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("📝 Rename ",callback_data = "rename")
        ,InlineKeyboardButton("Cancel✖️",callback_data = "cancel")  ]]))
