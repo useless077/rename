@@ -22,7 +22,8 @@ async def help(c, m, cb=False):
             reply_markup=reply_markup
         )
     else:
-        await m.reply_text(
+        await m.reply_photo(
+            photo="https://telegra.ph/file/7e56d907542396289fee4.jpg",
             text=script.HELP_USER.format(m.from_user.first_name),
             disable_web_page_preview=True,
             reply_markup=reply_markup,
