@@ -8,10 +8,9 @@ from Script import script
 async def start(client, message):
           await client.send_message(
           chat_id=message.chat.id,
-          text=script.START_TEXT.format(user_mention=message.from_user.mention(style="md")),
+          text=script.START_TEXT.format(user_mention=message.from_user.mention),
           parse_mode="html",
           disable_web_page_preview=True,
-          quote=True,
           reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton(text='⭕ Cʜᴀɴɴᴇʟ ⭕', url=f'https://t.me/TamilBots'),
                                                  InlineKeyboardButton(text='⭕ Sᴜᴘᴘᴏʀᴛ ⭕', url=f'https://t.me/TamilBots') ],
                                                [ InlineKeyboardButton(text='👨‍💻 Dᴇᴘʟᴏʏ Nᴏᴡ', url='https://youtube.com/c/TamilBots'),                                                
