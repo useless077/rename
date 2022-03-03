@@ -9,9 +9,9 @@ from pyrogram.emoji import *
 @Client.on_message(filters.command("help") & filters.private & filters.incoming)
 async def help(c, m, cb=False):
     button = [[
-        InlineKeyboardButton(f'{HOUSE_WITH_GARDEN} Home', callback_data='back'),
         InlineKeyboardButton(f'{MONEY_BAG} dev', url='https://t.me/tamilbots')
         ],[
+        InlineKeyboardButton(f'{HOUSE_WITH_GARDEN} Home', callback_data='back'),
         InlineKeyboardButton(f'{NO_ENTRY} 𝙲𝚕𝚘𝚜𝚎', callback_data='close')
     ]]
     reply_markup = InlineKeyboardMarkup(button)
