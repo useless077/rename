@@ -4,10 +4,6 @@ import humanize
 from helper.database import  insert 
 from Script import script
 
-class temp(object): 
-U_NAME = None 
-B_NAME = None
-
 @Client.on_message(filters.command(["start"]))
 async def start(bot, update):
           await bot.send_message(
