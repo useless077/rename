@@ -38,7 +38,7 @@ async def close_cb(c, m):
   #  await m.message.delete()
   #  await m.message.reply_to_message.delete()
         try:
-		await update.message.delete()
+		await m.message.delete()
 	except:
 		return
 
