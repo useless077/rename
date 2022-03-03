@@ -5,10 +5,10 @@ from helper.database import  insert
 from Script import script
 
 @Client.on_message(filters.command(["start"]))
-async def start(bot, update):
-          await bot.send_message(
-          chat_id=update.chat.id,
-          text=script.START_TEXT.format(user_mention=m.from_user.mention(style="md")),
+async def start(client, message):
+          await client.send_message(
+          chat_id=message.chat.id,
+          text=script.START_TEXT.format(user_mention=message.from_user.mention(style="md")),
           parse_mode="html",
           disable_web_page_preview=True,
           reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton(text='⭕ Cʜᴀɴɴᴇʟ ⭕', url=f'https://t.me/TamilBots'),
