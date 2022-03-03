@@ -18,15 +18,16 @@ async def help(c, m, cb=False):
     if cb:
         await m.message.edit(
             text=script.HELP_USER.format(m.from_user.first_name),
+            reply_markup=reply_markup,
             disable_web_page_preview=True,
-            reply_markup=reply_markup
         )
     else:
         await m.reply_photo(
             photo="https://telegra.ph/file/7e56d907542396289fee4.jpg",
             caption=script.HELP_USER.format(m.from_user.first_name),
-            disable_web_page_preview=True,
-            reply_markup=reply_markup,          
+            reply_markup=reply_markup,
+            parse_mode='html'
+          
         )
 
 
@@ -53,8 +54,9 @@ async def start(c, m, cb=False):
         await m.reply_photo(
             photo="https://telegra.ph/file/7e56d907542396289fee4.jpg",
             caption=script.START_TEXT.format(user_mention=m.from_user.mention),
-            disable_web_page_preview=True,
             reply_markup=reply_markup,
+            parse_mode='html'
+
         ) 
 
 
