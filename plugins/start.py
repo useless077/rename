@@ -11,10 +11,10 @@ async def start(bot, update):
           text=script.START_TEXT,
           parse_mode="html",
           disable_web_page_preview=True,
-          reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton(text='⭕ Cʜᴀɴɴᴇʟ ⭕', url=f'https://t.me/{Config.UPDATE_CHANNEL}'),
-                                                 InlineKeyboardButton(text='⭕ Sᴜᴘᴘᴏʀᴛ ⭕', url=f'https://t.me/{Config.UPDATE_GROUP}') ],
-                                               [ InlineKeyboardButton(text='👨‍💻 Dᴇᴘʟᴏʏ Nᴏᴡ', url='https://youtu.be/2FHgg8o1YY8'),                                                
-                                                 InlineKeyboardButton(text='🔐 Cʟᴏꜱᴇ 🔐', url='https://youtu.be/2FHgg8o1YY8') ] ] ) )
+          reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton(text='⭕ Cʜᴀɴɴᴇʟ ⭕', url=f'https://t.me/TamilBots'),
+                                                 InlineKeyboardButton(text='⭕ Sᴜᴘᴘᴏʀᴛ ⭕', url=f'https://t.me/TamilBots') ],
+                                               [ InlineKeyboardButton(text='👨‍💻 Dᴇᴘʟᴏʏ Nᴏᴡ', url='https://youtube.com/c/TamilBots'),                                                
+                                                 InlineKeyboardButton(text='🔐 Cʟᴏꜱᴇ 🔐', url='https://youtube.com/c/TamilBots') ] ] ) )
 
 
 @Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
