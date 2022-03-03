@@ -17,7 +17,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 from .start import *
-from ..Script import script
+from Script import script
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import UserBannedInChannel, UserNotParticipant
