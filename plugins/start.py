@@ -6,7 +6,7 @@ from Script import script
 from pyrogram.emoji import *
 
 
-RenamerNs.on_message(filters.command("help") & filters.private & filters.incoming)
+@Client.on_message(filters.command("help") & filters.private & filters.incoming)
 async def help(c, m, cb=False):
     button = [[
         InlineKeyboardButton(f'{HOUSE_WITH_GARDEN} Home', callback_data='back'),
@@ -32,7 +32,7 @@ async def help(c, m, cb=False):
 
 ################## start commamd ##################
 
-@RenamerNs.on_message(filters.command("start") & filters.private & filters.incoming)
+@Client.on_message(filters.command("start") & filters.private & filters.incoming)
 async def start(c, m, cb=False):
     owner_username = owner.username if owner.username else 'Ns_bot_updates'
     button = [[
@@ -59,7 +59,7 @@ async def start(c, m, cb=False):
 
 ################## about command ##################
 
-@RenamerNs.on_message(filters.command("about") & filters.private & filters.incoming)
+@Client.on_message(filters.command("about") & filters.private & filters.incoming)
 async def about(c, m, cb=False):
     me = await c.get_me()
 
