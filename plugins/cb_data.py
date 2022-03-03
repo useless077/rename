@@ -26,14 +26,14 @@ from pyrogram.emoji import *
 
 ################## Callback for help button ##################
 
-@RenamerNs.on_callback_query(filters.regex('^help$'))
+@Client.on_callback_query(filters.regex('^help$'))
 async def help_cb(c, m):
     await m.answer()
     await help(c, m, True)
 
 ################## Callback for close button ##################
 
-@RenamerNs.on_callback_query(filters.regex('^close$'))
+@Client.on_callback_query(filters.regex('^close$'))
 async def close_cb(c, m):
     await m.message.delete()
     await m.message.reply_to_message.delete()
@@ -41,7 +41,7 @@ async def close_cb(c, m):
 
 ################## Callback for home button ##################
 
-@RenamerNs.on_callback_query(filters.regex('^back$'))
+@Client.on_callback_query(filters.regex('^back$'))
 async def back_cb(c, m):
     await m.answer()
     await start(c, m, True)
@@ -49,7 +49,7 @@ async def back_cb(c, m):
 
 ################## Callback for about button ##################
 
-@RenamerNs.on_callback_query(filters.regex('^about$'))
+@Client.on_callback_query(filters.regex('^about$'))
 async def about_cb(c, m):
     await m.answer()
     await about(c, m, True)
