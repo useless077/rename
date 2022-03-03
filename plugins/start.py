@@ -8,7 +8,7 @@ from Script import script
 async def start(bot, update):
           await bot.send_message(
           chat_id=update.chat.id,
-          text=script.START_TEXT,
+          text=script.START_TEXT.format(user_mention=m.from_user.mention(style="md")),
           parse_mode="html",
           disable_web_page_preview=True,
           reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton(text='⭕ Cʜᴀɴɴᴇʟ ⭕', url=f'https://t.me/TamilBots'),
