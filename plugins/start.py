@@ -34,7 +34,6 @@ async def help(c, m, cb=False):
 
 @Client.on_message(filters.command("start") & filters.private & filters.incoming)
 async def start(c, m, cb=False):
-    me = await c.get_me()
 
     button = [[
         InlineKeyboardButton(f'{MAN_TEACHER_LIGHT_SKIN_TONE} TamilBots', url=f'https://t.me/tamilbots'),
@@ -46,13 +45,13 @@ async def start(c, m, cb=False):
     reply_markup = InlineKeyboardMarkup(button)
     if cb:
         await m.message.edit(
-            text=script.START_TEXT.format(bot_name=me.mention),
+            text=script.START_TEXT.format(user_mention=m.from_user.mention),
             disable_web_page_preview=True,
             reply_markup=reply_markup
         )
     else:
         await m.reply_text(
-            text=script.START_TEXT.format(bot_name=me.mention),
+            text=script.START_TEXT.format(user_mention=m.from_user.mention),
             disable_web_page_preview=True,
             reply_markup=reply_markup,
         ) 
