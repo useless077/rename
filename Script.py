@@ -28,7 +28,7 @@ class script(object):
 
 ** FrameWork:** [Pyrogram](https://github.com/pyrogram/pyrogram)
 
-** Developer:** {bot_owner}
+** Developer:** [✭Iϻsαi🎭Arⱥ𝖘aภ✭](https://t.me/SaravanaKrish)
 
 ** Channel:** [NS BOT UPDATES](https://t.me/Ns_bot_updates)
 
@@ -39,7 +39,6 @@ class script(object):
 
     HELP_USER = """**Follow Below Steps:**
    
-☞︎︎︎ Use /mode command to change upload mode.
 ☞︎︎︎ Send a photo to set as permanent thumbnail.
 ☞︎︎︎ Now send me the Telegram file you want to rename.
 ☞︎︎︎ Send the new name when bot ask.
