@@ -5,8 +5,6 @@ from helper.database import  insert
 from Script import script
 
 
-PICS = 
-
 @Client.on_message(filters.private & filters.command(["start"]))
 async def start(client,message):
 	insert(int(message.chat.id))
