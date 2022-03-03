@@ -4,11 +4,15 @@ import humanize
 from helper.database import  insert 
 from Script import script
 
+class temp(object): 
+U_NAME = None 
+B_NAME = None
+
 @Client.on_message(filters.command(["start"]))
 async def start(bot, update):
           await bot.send_message(
           chat_id=update.chat.id,
-          text=script.START_TEXT.format(update.from_user.first_name),
+          text=script.START_TEXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
           parse_mode="html",
           disable_web_page_preview=True,
           reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton(text='⭕ Cʜᴀɴɴᴇʟ ⭕', url=f'https://t.me/TamilBots'),
