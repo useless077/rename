@@ -2,20 +2,30 @@ from pyrogram import Client, filters
 from pyrogram.types import ( InlineKeyboardButton, InlineKeyboardMarkup,ForceReply)
 import humanize
 from helper.database import  insert 
+from Script import script
+
+
+PICS = 
 
 @Client.on_message(filters.private & filters.command(["start"]))
 async def start(client,message):
 	insert(int(message.chat.id))
-	await message.reply_text(text =f"""
-	Hello {message.from_user.first_name }
-	__I am file renamer bot, Please sent any telegram 
-	**Document Or Video** and enter new filenameto rename it__
-	""",reply_to_message_id = message.message_id ,  
-	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/TamilSupport") ], 
-	[InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/TamilBots") ]  ]))
-
-
+        buttons = [[
+            InlineKeyboardButton('🤗 Join our Movie Group 🤗', url='http://t.me/TamilMoviesChat')
+            ],[
+            InlineKeyboardButton('Updates', url='https://t.me/TamilBots'),
+            InlineKeyboardButton('👨‍💻 Support chat, url='https://t.me/TamilSupport')
+            ],[
+            InlineKeyboardButton('ℹ️ Help', url='https://t.me/TamilBots'),
+            InlineKeyboardButton('😊 About', url='https://t.me/TamilBots')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_photo(
+            photo=https://telegra.ph/file/7e56d907542396289fee4.jpg,
+            caption=script.START_TXT.format(message.from_user.first_name),
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
 
 @Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
 async def send_doc(client,message):
