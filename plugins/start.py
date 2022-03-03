@@ -7,7 +7,7 @@ from Script import script
 
 @Client.on_message(filters.private & filters.command(["start"]))
 async def start(client,message):
-	insert(int(message.chat.id))
+#	insert(int(message.chat.id))
         buttons = [[
             InlineKeyboardButton('🧗 Updates', url=f'https://t.me/TamilBots'),
             InlineKeyboardButton('👨‍💻 Support chat, url=f'https://t.me/TamilSupport')
