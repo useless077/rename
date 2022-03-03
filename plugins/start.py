@@ -4,7 +4,7 @@ import humanize
 from helper.database import  insert 
 from Script import script
 
-
+#
 @Client.on_message(filters.private & filters.command(["start"]))
 async def start(client,message):
 	insert(int(message.chat.id))
