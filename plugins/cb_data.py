@@ -35,12 +35,9 @@ async def help_cb(c, m):
 
 @Client.on_callback_query(filters.regex('^close$'))
 async def close_cb(c, m):
-  #  await m.message.delete()
-  #  await m.message.reply_to_message.delete()
-        try:
-		await m.message.delete()
-	except:
-		return
+    await m.message.delete()
+    await m.message.reply_to_message.delete()
+        
 
 ################## Callback for home button ##################
 
