@@ -34,9 +34,8 @@ async def help(c, m, cb=False):
 
 @Client.on_message(filters.command("start") & filters.private & filters.incoming)
 async def start(c, m, cb=False):
-    owner_username = owner.username if owner.username else 'Ns_bot_updates'
     button = [[
-        InlineKeyboardButton(f'{MAN_TEACHER_LIGHT_SKIN_TONE} My Owner', url=f'https://t.me/{owner_username}'),
+        InlineKeyboardButton(f'{MAN_TEACHER_LIGHT_SKIN_TONE} TamilBots', url=f'https://t.me/tamilbots'),
         InlineKeyboardButton(f'{ROBOT} About', callback_data='about')
         ],[
         InlineKeyboardButton(f'{INFORMATION} Help', callback_data="help"),
