@@ -4,7 +4,7 @@ import humanize
 from helper.database import  insert 
 from Script import script
 
-@Clinton.on_message(filters.command(["start"]))
+@Client.on_message(filters.command(["start"]))
 async def start(bot, update):
           await bot.send_message(
           chat_id=update.chat.id,
