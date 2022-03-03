@@ -3,6 +3,7 @@ from pyrogram.types import ( InlineKeyboardButton, InlineKeyboardMarkup,ForceRep
 import humanize
 from helper.database import  insert 
 from Script import script
+from pyrogram.emoji import *
 
 
 RenamerNs.on_message(filters.command("help") & filters.private & filters.incoming)
