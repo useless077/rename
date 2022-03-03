@@ -7,11 +7,6 @@ from Script import script
 #
 @Client.on_message(filters.private & filters.command(["start"]))
 async def start(client,message):
-	insert(int(message.chat.id))
-#        buttons = [[
-#            InlineKeyboardButton('🧗 Updates', url=f'https://t.me/TamilBots'),
-#            InlineKeyboardButton('👨‍💻 Support chat, url=f'https://t.me/TamilSupport')
-#        ]]
         buttons = [
             [
                 InlineKeyboardButton('🤖 Updates', url='https://t.me/TamilBots')
@@ -20,6 +15,12 @@ async def start(client,message):
                 InlineKeyboardButton('🤖 Updates', url='https://t.me/TamilBots'),
             ]
             ]
+	insert(int(message.chat.id))
+#        buttons = [[
+#            InlineKeyboardButton('🧗 Updates', url=f'https://t.me/TamilBots'),
+#            InlineKeyboardButton('👨‍💻 Support chat, url=f'https://t.me/TamilSupport')
+#        ]]
+        
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=https://telegra.ph/file/7e56d907542396289fee4.jpg,
