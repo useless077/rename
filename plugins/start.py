@@ -11,6 +11,7 @@ async def start(client, message):
           text=script.START_TEXT.format(user_mention=message.from_user.mention(style="md")),
           parse_mode="html",
           disable_web_page_preview=True,
+          quote=True,
           reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton(text='⭕ Cʜᴀɴɴᴇʟ ⭕', url=f'https://t.me/TamilBots'),
                                                  InlineKeyboardButton(text='⭕ Sᴜᴘᴘᴏʀᴛ ⭕', url=f'https://t.me/TamilBots') ],
                                                [ InlineKeyboardButton(text='👨‍💻 Dᴇᴘʟᴏʏ Nᴏᴡ', url='https://youtube.com/c/TamilBots'),                                                
