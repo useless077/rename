@@ -9,13 +9,8 @@ from Script import script
 async def start(client,message):
 	insert(int(message.chat.id))
         buttons = [[
-            InlineKeyboardButton('🤗 Join our Movie Group 🤗', url='http://t.me/TamilMoviesChat')
-            ],[
-            InlineKeyboardButton('Updates', url='https://t.me/TamilBots'),
-            InlineKeyboardButton('👨‍💻 Support chat, url='https://t.me/TamilSupport')
-            ],[
-            InlineKeyboardButton('ℹ️ Help', url='https://t.me/TamilBots'),
-            InlineKeyboardButton('😊 About', url='https://t.me/TamilBots')
+            InlineKeyboardButton('🧗 Updates', url=f'https://t.me/TamilBots'),
+            InlineKeyboardButton('👨‍💻 Support chat, url=f'https://t.me/TamilSupport')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
