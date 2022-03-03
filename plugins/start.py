@@ -8,7 +8,7 @@ from Script import script
 async def start(bot, update):
           await bot.send_message(
           chat_id=update.chat.id,
-          text=Script.START_TEXT,
+          text=script.START_TEXT,
           parse_mode="html",
           disable_web_page_preview=True,
           reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton(text='⭕ Cʜᴀɴɴᴇʟ ⭕', url=f'https://t.me/{Config.UPDATE_CHANNEL}'),
