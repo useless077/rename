@@ -15,7 +15,26 @@ async def start(client, message):
                                                  InlineKeyboardButton(text='⭕ Sᴜᴘᴘᴏʀᴛ ⭕', url=f'https://t.me/TamilBots') ],
                                                [ InlineKeyboardButton(text='👨‍💻 Dᴇᴘʟᴏʏ Nᴏᴡ', url='https://youtube.com/c/TamilBots'),                                                
                                                  InlineKeyboardButton(text='🔐 Cʟᴏꜱᴇ 🔐', url='https://youtube.com/c/TamilBots') ] ] ) )
-
+@Client.on_message(filters.command("about") & filters.private & filters.incoming)
+async def about(c, m, cb=False):
+    me = await c.get_me()
+    button = [[
+        InlineKeyboardButton(text='🏡Home', callback_data='back'),
+        InlineKeyboardButton(text='🚪Close', callback_data="close")
+    ]]
+    reply_markup = InlineKeyboardMarkup(button)
+    if cb:
+        await m.message.edit(
+            text=TEXT.ABOUT.format(bot_name=me.mention),
+            disable_web_page_preview=True,
+            reply_markup=reply_markup
+        )
+    else:
+        await m.reply_text(
+            text=TEXT.ABOUT.format(bot_name=me.mention),            
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+        )
 
 @Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
 async def send_doc(client,message):
