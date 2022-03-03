@@ -4,30 +4,18 @@ import humanize
 from helper.database import  insert 
 from Script import script
 
-#
-@Client.on_message(filters.private & filters.command(["start"]))
-async def start(client,message):
-        buttons = [
-            [
-                InlineKeyboardButton('🤖 Updates', url='https://t.me/TamilBots')
-            ],
-            [
-                InlineKeyboardButton('🤖 Updates', url='https://t.me/TamilBots'),
-            ]
-            ]
-	insert(int(message.chat.id))
-#        buttons = [[
-#            InlineKeyboardButton('🧗 Updates', url=f'https://t.me/TamilBots'),
-#            InlineKeyboardButton('👨‍💻 Support chat, url=f'https://t.me/TamilSupport')
-#        ]]
-        
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_photo(
-            photo='https://telegra.ph/file/7e56d907542396289fee4.jpg',
-            caption=script.START_TXT.format(message.from_user.first_name),
-            reply_markup=reply_markup,
-            parse_mode='html'
-        )
+@Clinton.on_message(filters.command(["start"]))
+async def start(bot, update):
+          await bot.send_message(
+          chat_id=update.chat.id,
+          text=Script.START_TEXT,
+          parse_mode="html",
+          disable_web_page_preview=True,
+          reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton(text='⭕ Cʜᴀɴɴᴇʟ ⭕', url=f'https://t.me/{Config.UPDATE_CHANNEL}'),
+                                                 InlineKeyboardButton(text='⭕ Sᴜᴘᴘᴏʀᴛ ⭕', url=f'https://t.me/{Config.UPDATE_GROUP}') ],
+                                               [ InlineKeyboardButton(text='👨‍💻 Dᴇᴘʟᴏʏ Nᴏᴡ', url='https://youtu.be/2FHgg8o1YY8'),                                                
+                                                 InlineKeyboardButton(text='🔐 Cʟᴏꜱᴇ 🔐', url='https://youtu.be/2FHgg8o1YY8') ] ] ) )
+
 
 @Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
 async def send_doc(client,message):
