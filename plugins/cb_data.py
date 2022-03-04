@@ -8,7 +8,7 @@ import os
 from PIL import Image
 import time
 from config import Config 
-
+from pyrogram.errors import UserBannedInChannel, UserNotParticipant
 
 
 
