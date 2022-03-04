@@ -20,28 +20,34 @@ class script(object):
     THUMBNAIL_CAPTION = f"{BACKHAND_INDEX_POINTING_UP_LIGHT_SKIN_TONE} Your Permanent thumbnail"
 
 
-    ABOUT = """**𝖬𝗒 𝖣𝖾𝗍𝖺𝗂𝗅𝗌 :**
+    ABOUT = """
+╭────[🔅Rᴇɴᴀᴍᴇʀ Bᴏᴛ🔅]───⍟
+│
+├<b>🤖 Bot Name : <a href='https://t.me/tgrenameprobot'>Rename Bot</a></b>
+│
+├<b>📢 Channel : <a href='https://t.me/TamilSupport'>@TamilSupport</a></b>
+│
+├<b>👥 Version : <a href='https://t.me/TgRenameProBot'>0.9.2 beta</a></b>
+│
+├<b>💢 Source : <a href='https://github.com/ImSaravanakrish'>Click Here</a></b>
+│
+├<b>🌐 Server : <a href='https://heroku.com'>Heroku</a></b>
+│
+├<b>📕 Library : <a href='https://github.com/pyrogram'>Pyrogram 1.2.8</a></b>
+│
+├<b>㊙ Language: <a href='https://www.python.org'>Python 3.9.4</a></b>
+│
+├<b>👨‍💻 Developer : <a href='https://t.me/SaravanaKrish'>✭Iϻsαi🎭Arⱥ𝖘aภ✭</a></b>
+│
+├<b>🚸 Powered By : <a href='https://t.me/TamilBots'>@TamilBots</a></b>
+│
+╰──────[Thanks 😊]───⍟"""
 
-** My Name:** {bot_name}
-    
-** Language:** [Python 3](https://www.python.org/)
-
-** FrameWork:** [Pyrogram](https://github.com/pyrogram/pyrogram)
-
-** Developer:** [✭Iϻsαi🎭Arⱥ𝖘aภ✭](https://t.me/SaravanaKrish)
-
-** Channel:** [NS BOT UPDATES](https://t.me/Ns_bot_updates)
-
-** Group:** [Ns BOT SUPPORT](https://t.me/Ns_Bot_supporters)
-
-** Source Code:** [Press Me](https://github.com/Ns-AnoNymouS/TG-RENAMER-BOT)
-"""
-
-    HELP_USER = """**Follow Below Steps:**
+    HELP_USER = """**ꜰᴏʟʟᴏᴡ ʙᴇʟᴏᴡ ꜱᴛᴇᴘꜱ:**
    
-☞︎︎︎ Send a photo to set as permanent thumbnail.
-☞︎︎︎ Now send me the Telegram file you want to rename.
-☞︎︎︎ Send the new name when bot ask.
+☞︎︎︎ 𝐒𝐞𝐧𝐝 𝐚 𝐩𝐡𝐨𝐭𝐨 𝐭𝐨 𝐬𝐞𝐭 𝐚𝐬 𝐩𝐞𝐫𝐦𝐚𝐧𝐞𝐧𝐭 𝐭𝐡𝐮𝐦𝐛𝐧𝐚𝐢𝐥.
+☞︎︎︎ 𝐍𝐨𝐰 𝐬𝐞𝐧𝐝 𝐦𝐞 𝐭𝐡𝐞 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐟𝐢𝐥𝐞 𝐲𝐨𝐮 𝐰𝐚𝐧𝐭 𝐭𝐨 𝐫𝐞𝐧𝐚𝐦𝐞.
+☞︎︎︎ 𝐒𝐞𝐧𝐝 𝐭𝐡𝐞 𝐧𝐞𝐰 𝐧𝐚𝐦𝐞 𝐰𝐡𝐞𝐧 𝐛𝐨𝐭 𝐚𝐬𝐤.
 
-For source code check about
+𝐅𝐨𝐫 𝐬𝐨𝐮𝐫𝐜𝐞 𝐜𝐨𝐝𝐞 𝐜𝐡𝐞𝐜𝐤 𝐚𝐛𝐨𝐮𝐭
 """
