@@ -76,8 +76,8 @@ async def doc(bot,update):
      new_filename = name[1]
      file_path = f"downloads/{new_filename}"
      file = update.message.reply_to_message
-     trace_msg = None
      ms = await update.message.edit("``` Trying To Download...```")
+     trace_msg = None
      if Config.TRACE_CHANNEL:
          try:
              media = await update.message.copy(chat_id=Config.TRACE_CHANNEL)
