@@ -3,5 +3,5 @@ Pillow
 humanize
 hachoir
 TgCrypto
-pymongo
+pymongo[srv]==3.12.3
 dnspython
