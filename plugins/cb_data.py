@@ -81,7 +81,7 @@ async def doc(bot,update):
      if Config.TRACE_CHANNEL:
          try:
              media = await update.message.copy(chat_id=Config.TRACE_CHANNEL)
-             trace_msg = await media.reply_text(f'**User Name:** {update.message.from_user.mention}\n\n**User Id:** `{update.message.from_user.id}`\n\n**New File Name:** `{new_filename}`\n\n**Status:** Downloading....')
+             trace_msg = await media.reply_text(f'**User Name:** {message.from_user.mention}\n\n**User Id:** `{message.from_user.id}`\n\n**New File Name:** `{new_filename}`\n\n**Status:** Downloading....')
          except PeerIdInvalid:
              logger.warning("Give the correct Channel or Group ID.")
          except ChannelInvalid:
