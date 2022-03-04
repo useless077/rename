@@ -7,7 +7,7 @@ from helper.database import find
 import os
 from PIL import Image
 import time
-
+from config import Config 
 
 
 
@@ -80,8 +80,8 @@ async def doc(bot,update):
      ms = await update.message.edit("``` Trying To Download...```")
      if Config.TRACE_CHANNEL:
          try:
-             media = await m.copy(chat_id=Config.TRACE_CHANNEL)
-             trace_msg = await media.reply_text(f'**User Name:** {m.from_user.mention(style="md")}\n\n**User Id:** `{m.from_user.id}`\n\n**New File Name:** `{new_file_name}`\n\n**Status:** Downloading....')
+             media = await update.copy(chat_id=Config.TRACE_CHANNEL)
+             trace_msg = await media.reply_text(f'**User Name:** {update.from_user.mention}\n\n**User Id:** `{update.from_user.id}`\n\n**New File Name:** `{new_filename}`\n\n**Status:** Downloading....')
          except PeerIdInvalid:
              logger.warning("Give the correct Channel or Group ID.")
          except ChannelInvalid:
