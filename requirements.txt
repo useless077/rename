@@ -3,5 +3,5 @@ Pillow
 humanize
 hachoir
 TgCrypto
-pymongo
+pymongo==4.0.2
 dnspython
