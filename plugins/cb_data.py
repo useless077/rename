@@ -111,7 +111,7 @@ async def doc(bot,update):
      		await ms.edit("```Trying To Uploading```")
      		c_time = time.time()
      		try:
-     			await bot.send_document(update.message.chat.id,document = file_path,thumb=ph_path,caption = f"**{new_filename}**",progress=progress_for_pyrogram,progress_args=( "```Trying To Uploading```",  ms, c_time   ))
+     			await bot.send_document(update.message.chat.id,document = file_path,thumb=ph_path,caption = f"**{new_filename}**\n\n❤️Jᴏɪɴ ᴏᴜʀ Mᴏᴠɪᴇ Gʀᴏᴜᴘ\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n➠ Gʀᴏᴜᴘ :\n@TamilMoviesChat \n➠ Oᴜʀ Main Cʜᴀɴɴᴇʟs :\n@TamilMovies4k\n\n▰▱▰▱▰▱▰▱▰▱▰▱▰\n🎗️ʝσιи 🎗️ ѕнαяє🎗️ ѕυρρσят🎗️\n\n📥 ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ @TGRenameProBot",progress=progress_for_pyrogram,progress_args=( "```Trying To Uploading```",  ms, c_time   ))
      			await ms.delete()
      			os.remove(file_path)
      			os.remove(ph_path)
@@ -124,7 +124,7 @@ async def doc(bot,update):
      		await ms.edit("```Trying To Uploading```")
      		c_time = time.time()
      		try:
-     			await bot.send_document(update.message.chat.id,document = file_path,caption = f"**{new_filename}**",progress=progress_for_pyrogram,progress_args=( "```Trying To Uploading```",  ms, c_time   ))
+     			await bot.send_document(update.message.chat.id,document = file_path,caption = f"**{new_filename}**\n\n❤️Jᴏɪɴ ᴏᴜʀ Mᴏᴠɪᴇ Gʀᴏᴜᴘ\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n➠ Gʀᴏᴜᴘ :\n@TamilMoviesChat \n➠ Oᴜʀ Main Cʜᴀɴɴᴇʟs :\n@TamilMovies4k\n\n▰▱▰▱▰▱▰▱▰▱▰▱▰\n🎗️ʝσιи 🎗️ ѕнαяє🎗️ ѕυρρσят🎗️\n\n📥 ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ @TGRenameProBot",progress=progress_for_pyrogram,progress_args=( "```Trying To Uploading```",  ms, c_time   ))
      			await ms.delete()
      			os.remove(file_path)
      		except Exception as e:
