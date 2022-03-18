@@ -1,5 +1,6 @@
 from pyrogram import Client, filters
 from helper.database import find, delthumb, addthumb
+from config import Config
 
 @Client.on_message(filters.private & filters.command(['viewthumb']))
 async def viewthumb(client,message):
@@ -21,3 +22,13 @@ async def addthumbs(client,message):
 	addthumb(message.chat.id , file_id)
 	await message.reply_text("**Your Custom Thumbnail Saved Successfully** ✅")
 	
+# dummy 
+
+@Client.on_message(filters.photo & filters.incoming & filters.private)
+async def save_photo(c, m):
+
+    download_location = f"{Config.DOWNLOAD_LOCATION}/{m.from_user.id}.jpg"
+    await update_thumb(m.from_user.id, m.message_id)
+    await m.download(file_name=download_location)
+
+    await message.reply_text("**Your Custom Thumbnail Saved Successfully** ✅")
