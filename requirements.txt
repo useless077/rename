@@ -4,4 +4,4 @@ humanize
 hachoir
 TgCrypto
 pymongo==4.0.2
-dnspython
+dnspython==2.2.1
