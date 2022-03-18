@@ -99,7 +99,7 @@ async def doc(bot,update):
      dow_file_name = splitpath[1]
      old_file_name =f"downloads/{dow_file_name}"
      os.rename(old_file_name,file_path)
-     thumb_img = f"{Config.DOWNLOAD_LOCATION}/{update.message.chat.id}.jpg"
+     thumb_img = f"{Config.DOWNLOAD_LOCATION}/{message.from_user.id}.jpg"
      if thumb_img:
      		ph_path = await bot.download_media(thumb_img)
      		Image.open(ph_path).convert("RGB").save(ph_path)
